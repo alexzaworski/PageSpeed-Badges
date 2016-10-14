@@ -5,10 +5,9 @@ const express = require("express");
 const axios = require("axios");
 
 const app = express();
-app.set('port', (process.env.PORT || 3000));
+app.set("port", (process.env.PORT || 3000));
 
-app.get('/', function (req, res) {
-  res.contentType("image/svg+xml;charset=utf-8");
+app.get("/", function (req, res) {
   res.header("Cache-Control", "private, no-cache, no-store, must-revalidate");
   res.header("Content-Type", "image/svg+xml;charset=utf-8");
 
@@ -22,7 +21,7 @@ app.get('/', function (req, res) {
   if (process.env.googleKey) {
     psiOpts.key = process.env.googleKey;
   } else {
-    psiOpts.nokey = true
+    psiOpts.nokey = true;
   }
   psi(url, psiOpts).then(response => {
     const speed = response.ruleGroups.SPEED.score;
