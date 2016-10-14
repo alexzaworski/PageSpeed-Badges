@@ -27,7 +27,7 @@ app.get('/', function (req, res) {
   psi(url, psiOpts).then(response => {
     const speed = response.ruleGroups.SPEED.score;
     const color = getColor(speed);
-    axios.get(`${shieldsAPI}/PageSpeed${stratLabel}-${speed}-${color}.svg`).then( r => {
+    axios.get(`${shieldsAPI}/PageSpeed-${speed}${stratLabel}-${color}.svg`).then( r => {
       res.send(r.data);
     }, err => {
       console.log("Shields error", err);
