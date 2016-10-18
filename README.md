@@ -1,3 +1,5 @@
+_(images not loading? Give 'er a refresh— currently hosted on a freebie Heroku dyno)_
+
 # PageSpeed Insights Badges
 
 Flex your perf muscles 💪
