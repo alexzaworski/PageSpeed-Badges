@@ -3,8 +3,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "axios": "^0.15.0",
-    "express": "^4.14.0",
-    "psi": "^2.0.4"
+    "axios": "^0.18.0",
+    "psi": "^3.1.0"
   }
 }
